@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Nota - تطبيق ملاحظات ذكي مدعوم بالذكاء الاصطناعي. حوّل أفكارك إلى إجراءات منظمة مع Gemini AI">
+    <meta name="keywords" content="Nota, Notes App, AI Notes, مذكرات, تطبيق ملاحظات, ذكاء اصطناعي">
+    <meta name="author" content="Nota Team">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Nota - تطبيق الملاحظات الذكي">
+    <meta property="og:description" content="تطبيق ملاحظات مدعوم بالذكاء الاصطناعي Gemini 2.5 Flash. دعم كامل للعربية.">
+    <meta property="og:image" content="images/og-image.png">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Nota - تطبيق الملاحظات الذكي">
+    <meta name="twitter:description" content="تطبيق ملاحظات مدعوم بالذكاء الاصطناعي Gemini 2.5 Flash">
+    
+    <title>Nota - تطبيق الملاحظات الذكي | AI-Powered Notes App</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    
+    <!-- Google Fonts - Tajawal for Arabic -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <img src="images/logo.png" alt="Nota Logo" class="nav-logo">
+                <span class="nav-title">Nota</span>
+            </div>
+            <div class="nav-links" id="navLinks">
+                <a href="#features">المميزات</a>
+                <a href="#screenshots">التطبيق</a>
+                <a href="#tech">التقنيات</a>
+                <a href="#download" class="btn btn-nav">تحميل</a>
+            </div>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg">
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+            <div class="gradient-orb orb-3"></div>
+        </div>
+        <div class="container hero-content">
+            <div class="hero-text">
+                <div class="badge">
+                    <i class="fas fa-sparkles"></i>
+                    <span>مدعوم بـ Gemini 2.5 Flash</span>
+                </div>
+                <h1>حوّل أفكارك إلى<br><span class="gradient-text">إجراءات منظمة</span></h1>
+                <p class="hero-description">
+                    تطبيق ملاحظات ذكي مدعوم بالذكاء الاصطناعي. أدخل ملاحظاتك بالنص أو الصوت أو الكاميرا، 
+                    ودع الذكاء الاصطناعي ينظمها تلقائياً إلى مهام ومواعيد ومصروفات.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#download" class="btn btn-primary">
+                        <i class="fas fa-download"></i>
+                        تحميل التطبيق
+                    </a>
+                    <a href="https://github.com/your-username/nota" target="_blank" class="btn btn-outline">
+                        <i class="fab fa-github"></i>
+                        GitHub
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">6+</span>
+                        <span class="stat-label">طرق تسجيل دخول</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">6</span>
+                        <span class="stat-label">منصات مدعومة</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">AI</span>
+                        <span class="stat-label">تصنيف ذكي</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="phone-mockup">
+                    <img src="images/app-preview.png" alt="Nota App Preview">
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">المميزات</span>
+                <h2>كل ما تحتاجه في تطبيق واحد</h2>
+                <p>مجموعة متكاملة من الأدوات الذكية لتنظيم حياتك</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>ذكاء اصطناعي متقدم</h3>
+                    <p>يصنف ملاحظاتك تلقائياً إلى مهام ومواعيد ومصروفات باستخدام Gemini 2.5 Flash</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-microphone"></i>
+                    </div>
+                    <h3>إدخال صوتي</h3>
+                    <p>تحدث بالعربية أو الإنجليزية ودع التطبيق يحوّل كلامك إلى ملاحظات منظمة</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                    <h3>مسح ذكي</h3>
+                    <p>صوّر الفواتير والإيصالات واستخرج المعلومات تلقائياً</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <h3>إدارة المهام</h3>
+                    <p>تتبع مهامك مع الأولويات والمواعيد والمهام الفرعية</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-wallet"></i>
+                    </div>
+                    <h3>تتبع المصروفات</h3>
+                    <p>سجل مصروفاتك مع التصنيفات والمبالغ بسهولة</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <h3>المواعيد</h3>
+                    <p>جدولة مواعيدك مع تكامل التقويم والتذكيرات</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Auth Methods Section -->
+    <section class="auth-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">الأمان</span>
+                <h2>طرق تسجيل دخول متعددة</h2>
+                <p>اختر الطريقة الأنسب لك للوصول السريع والآمن</p>
+            </div>
+            
+            <div class="auth-methods">
+                <div class="auth-card">
+                    <i class="fas fa-envelope"></i>
+                    <span>Email</span>
+                </div>
+                <div class="auth-card">
+                    <i class="fab fa-google"></i>
+                    <span>Google</span>
+                </div>
+                <div class="auth-card">
+                    <i class="fab fa-facebook-f"></i>
+                    <span>Facebook</span>
+                </div>
+                <div class="auth-card">
+                    <i class="fab fa-github"></i>
+                    <span>GitHub</span>
+                </div>
+                <div class="auth-card">
+                    <i class="fab fa-apple"></i>
+                    <span>Apple</span>
+                </div>
+                <div class="auth-card">
+                    <i class="fas fa-fingerprint"></i>
+                    <span>Biometric</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Screenshots Section -->
+    <section class="screenshots" id="screenshots">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">لقطات الشاشة</span>
+                <h2>شاهد التطبيق بنفسك</h2>
+                <p>تصميم عصري وتجربة مستخدم سلسة</p>
+            </div>
+            
+            <div class="screenshots-slider">
+                <div class="screenshot-item">
+                    <img src="images/screenshots/splash.png" alt="Splash Screen">
+                    <span class="screenshot-label">شاشة البداية</span>
+                </div>
+                <div class="screenshot-item">
+                    <img src="images/screenshots/login.png" alt="Login Screen">
+                    <span class="screenshot-label">تسجيل الدخول</span>
+                </div>
+                <div class="screenshot-item">
+                    <img src="images/screenshots/dashboard.png" alt="Dashboard">
+                    <span class="screenshot-label">لوحة التحكم</span>
+                </div>
+                <div class="screenshot-item">
+                    <img src="images/screenshots/ai-input.png" alt="AI Input">
+                    <span class="screenshot-label">الإدخال الذكي</span>
+                </div>
+                <div class="screenshot-item">
+                    <img src="images/screenshots/tasks.png" alt="Tasks">
+                    <span class="screenshot-label">المهام</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Stack Section -->
+    <section class="tech-stack" id="tech">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">التقنيات</span>
+                <h2>مبني بأحدث التقنيات</h2>
+                <p>تقنيات موثوقة وأداء عالي</p>
+            </div>
+            
+            <div class="tech-grid">
+                <div class="tech-card">
+                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/flutter/flutter-original.svg" alt="Flutter">
+                    <span>Flutter</span>
+                </div>
+                <div class="tech-card">
+                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/dart/dart-original.svg" alt="Dart">
+                    <span>Dart</span>
+                </div>
+                <div class="tech-card">
+                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/firebase/firebase-plain.svg" alt="Firebase">
+                    <span>Firebase</span>
+                </div>
+                <div class="tech-card">
+                    <img src="https://www.gstatic.com/lamda/images/gemini_sparkle_v002_d4735304ff6292a690345.svg" alt="Gemini AI">
+                    <span>Gemini AI</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Platforms Section -->
+    <section class="platforms">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">المنصات</span>
+                <h2>متوفر على جميع المنصات</h2>
+                <p>تطبيق واحد يعمل في كل مكان</p>
+            </div>
+            
+            <div class="platforms-grid">
+                <div class="platform-card">
+                    <i class="fab fa-android"></i>
+                    <span>Android</span>
+                    <small>API 21+</small>
+                </div>
+                <div class="platform-card">
+                    <i class="fab fa-apple"></i>
+                    <span>iOS</span>
+                    <small>12.0+</small>
+                </div>
+                <div class="platform-card">
+                    <i class="fab fa-chrome"></i>
+                    <span>Web</span>
+                    <small>Modern Browsers</small>
+                </div>
+                <div class="platform-card">
+                    <i class="fab fa-windows"></i>
+                    <span>Windows</span>
+                    <small>10+</small>
+                </div>
+                <div class="platform-card">
+                    <i class="fab fa-apple"></i>
+                    <span>macOS</span>
+                    <small>10.14+</small>
+                </div>
+                <div class="platform-card">
+                    <i class="fab fa-linux"></i>
+                    <span>Linux</span>
+                    <small>Ubuntu 20.04+</small>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section class="download" id="download">
+        <div class="container">
+            <div class="download-content">
+                <h2>جاهز للبدء؟</h2>
+                <p>حمّل التطبيق الآن وابدأ بتنظيم حياتك بذكاء</p>
+                
+                <div class="download-buttons">
+                    <a href="#" class="download-btn android">
+                        <i class="fab fa-google-play"></i>
+                        <div class="btn-text">
+                            <small>GET IT ON</small>
+                            <span>Google Play</span>
+                        </div>
+                    </a>
+                    <a href="#" class="download-btn ios">
+                        <i class="fab fa-apple"></i>
+                        <div class="btn-text">
+                            <small>Download on the</small>
+                            <span>App Store</span>
+                        </div>
+                    </a>
+                    <a href="https://github.com/your-username/nota/releases" target="_blank" class="download-btn github">
+                        <i class="fab fa-github"></i>
+                        <div class="btn-text">
+                            <small>Download from</small>
+                            <span>GitHub</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="images/logo.png" alt="Nota Logo">
+                    <span>Nota</span>
+                </div>
+                <div class="footer-links">
+                    <a href="https://github.com/your-username/nota" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/your-profile" target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Nota. MIT License.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+</body>
+</html>

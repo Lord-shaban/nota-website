@@ -3,184 +3,381 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Nota - تطبيق ملاحظات ذكي مدعوم بالذكاء الاصطناعي Gemini. حوّل أفكارك إلى إجراءات منظمة تلقائياً.">
-    <meta name="keywords" content="Nota, Notes App, AI Notes, Flutter, مذكرات, تطبيق ملاحظات, ذكاء اصطناعي, Gemini">
+    <meta name="description" content="Nota - تطبيق الملاحظات الذكي المدعوم بالذكاء الاصطناعي Gemini 2.5 Flash. سجّل أفكارك بالنص أو الصوت أو الكاميرا ودع الذكاء الاصطناعي ينظمها تلقائياً.">
+    <meta name="keywords" content="Nota, Notes App, AI Notes, Flutter, مذكرات, تطبيق ملاحظات, ذكاء اصطناعي, Gemini, تحميل تطبيق, مهام, مواعيد, مصروفات">
     <meta name="author" content="Nota Team">
-    <meta name="theme-color" content="#0D0D0D">
+    <meta name="theme-color" content="#58CC02">
     
     <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Nota - تطبيق الملاحظات الذكي">
-    <meta property="og:description" content="حوّل أفكارك إلى إجراءات منظمة مع الذكاء الاصطناعي">
+    <meta property="og:description" content="حوّل أفكارك إلى إجراءات منظمة مع الذكاء الاصطناعي Gemini 2.5">
     <meta property="og:image" content="images/og-image.png">
-    <meta property="og:url" content="https://lord-shaban.github.io/nota-website/">
+    <meta property="og:url" content="https://nota-app.vercel.app">
     
-    <title>Nota - AI-Powered Smart Notes</title>
+    <title>Nota - تطبيق الملاحظات الذكي | حمّل الآن</title>
     
     <link rel="icon" type="image/png" href="images/favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- Cursor Glow Effect -->
-    <div class="cursor-glow" id="cursorGlow"></div>
-    
+    <!-- Animated Background -->
+    <div class="bg-animation">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+        <div class="grid-overlay"></div>
+    </div>
+
     <!-- Navigation -->
-    <nav class="nav" id="nav">
+    <nav class="navbar" id="navbar">
         <div class="nav-container">
-            <a href="#" class="nav-logo">
-                <img src="images/logo.png" alt="Nota">
-                <span>Nota</span>
+            <a href="#" class="nav-brand">
+                <img src="images/logo.png" alt="Nota" class="nav-logo">
+                <span class="nav-title">Nota</span>
             </a>
-            <div class="nav-menu" id="navMenu">
+            
+            <div class="nav-links" id="navLinks">
+                <a href="#home" class="nav-link active">الرئيسية</a>
+                <a href="#about" class="nav-link">عن التطبيق</a>
                 <a href="#features" class="nav-link">المميزات</a>
-                <a href="#screenshots" class="nav-link">التطبيق</a>
-                <a href="#download" class="nav-link nav-cta">
-                    <i class="fas fa-download"></i>
-                    تحميل
-                </a>
+                <a href="#how-it-works" class="nav-link">كيف يعمل</a>
+                <a href="#screenshots" class="nav-link">الشاشات</a>
             </div>
-            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+            
+            <div class="nav-actions">
+                <a href="#download" class="btn-download">
+                    <i class="fab fa-android"></i>
+                    <span>تحميل للأندرويد</span>
+                </a>
+                <button class="nav-toggle" id="navToggle" aria-label="القائمة">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero" id="hero">
-        <div class="hero-glow"></div>
-        <div class="hero-grid"></div>
-        
-        <div class="hero-content">
-            <div class="hero-badge">
-                <span class="badge-dot"></span>
-                <span>Powered by Gemini 2.5 Flash</span>
+    <section class="hero" id="home">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <div class="badge-pulse"></div>
+                    <i class="fas fa-robot"></i>
+                    <span>مدعوم بـ Gemini 2.5 Flash AI</span>
+                </div>
+                
+                <h1 class="hero-title">
+                    <span class="title-line">ملاحظاتك</span>
+                    <span class="title-gradient">أكثر ذكاءً</span>
+                    <span class="title-line">من أي وقت مضى</span>
+                </h1>
+                
+                <p class="hero-description">
+                    تطبيق الملاحظات الذكي الذي يفهمك. اكتب، تحدث، أو صوّر - 
+                    <strong>Nota</strong> يصنف ملاحظاتك تلقائياً إلى مهام، مواعيد، مصروفات، وملاحظات شخصية باستخدام الذكاء الاصطناعي.
+                </p>
+                
+                <div class="hero-buttons">
+                    <a href="#download" class="btn-primary">
+                        <i class="fab fa-android"></i>
+                        <span>حمّل التطبيق للأندرويد</span>
+                    </a>
+                    <a href="https://github.com/Lord-shaban/Nota" target="_blank" class="btn-secondary">
+                        <i class="fab fa-github"></i>
+                        <span>الكود المصدري</span>
+                    </a>
+                </div>
+                
+                <div class="hero-stats">
+                    <div class="stat">
+                        <div class="stat-icon"><i class="fas fa-robot"></i></div>
+                        <div class="stat-info">
+                            <span class="stat-number">AI</span>
+                            <span class="stat-label">ذكاء اصطناعي</span>
+                        </div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-icon"><i class="fas fa-language"></i></div>
+                        <div class="stat-info">
+                            <span class="stat-number">AR/EN</span>
+                            <span class="stat-label">ثنائي اللغة</span>
+                        </div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-icon"><i class="fas fa-gift"></i></div>
+                        <div class="stat-info">
+                            <span class="stat-number">مجاني</span>
+                            <span class="stat-label">100%</span>
+                        </div>
+                    </div>
+                </div>
             </div>
             
-            <h1 class="hero-title">
-                <span class="title-line">حوّل أفكارك إلى</span>
-                <span class="title-gradient">إجراءات منظمة</span>
-            </h1>
-            
-            <p class="hero-desc">
-                تطبيق ملاحظات ذكي يستخدم الذكاء الاصطناعي لتصنيف ملاحظاتك تلقائياً إلى مهام ومواعيد ومصروفات. اكتب أو تحدث أو صوّر - Nota يفهمك.
-            </p>
-            
-            <div class="hero-actions">
-                <a href="#download" class="btn btn-primary">
-                    <i class="fas fa-rocket"></i>
-                    <span>حمّل الآن</span>
-                </a>
-                <a href="https://github.com/Lord-shaban/Nota" target="_blank" class="btn btn-ghost">
-                    <i class="fab fa-github"></i>
-                    <span>GitHub</span>
-                </a>
-            </div>
-            
-            <div class="hero-stats">
-                <div class="stat-item">
-                    <span class="stat-value">6</span>
-                    <span class="stat-label">منصات</span>
+            <div class="hero-visual">
+                <div class="phone-mockup">
+                    <div class="phone-frame">
+                        <div class="phone-speaker"></div>
+                        <div class="phone-screen">
+                            <img src="images/screenshots/Dashboard.png" alt="Nota Dashboard" class="screen-image">
+                        </div>
+                    </div>
+                    <div class="phone-glow"></div>
                 </div>
-                <div class="stat-divider"></div>
-                <div class="stat-item">
-                    <span class="stat-value">AI</span>
-                    <span class="stat-label">ذكي</span>
-                </div>
-                <div class="stat-divider"></div>
-                <div class="stat-item">
-                    <span class="stat-value">∞</span>
-                    <span class="stat-label">مجاني</span>
+                
+                <!-- Floating Feature Cards -->
+                <div class="floating-features">
+                    <div class="float-card float-1">
+                        <div class="float-icon"><i class="fas fa-brain"></i></div>
+                        <span>تصنيف ذكي</span>
+                    </div>
+                    <div class="float-card float-2">
+                        <div class="float-icon"><i class="fas fa-microphone"></i></div>
+                        <span>إدخال صوتي</span>
+                    </div>
+                    <div class="float-card float-3">
+                        <div class="float-icon"><i class="fas fa-camera"></i></div>
+                        <span>مسح ضوئي</span>
+                    </div>
+                    <div class="float-card float-4">
+                        <div class="float-icon"><i class="fas fa-shield-alt"></i></div>
+                        <span>آمن ومشفر</span>
+                    </div>
                 </div>
             </div>
         </div>
         
-        <div class="hero-visual">
-            <div class="phone-container">
-                <div class="phone-frame">
-                    <div class="phone-notch"></div>
-                    <img src="images/screenshots/Dashboard.png" alt="Nota Dashboard" class="phone-screen">
-                </div>
-                <div class="phone-reflection"></div>
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <span>اسحب للأسفل</span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-badge">عن التطبيق</span>
+                <h2 class="section-title">ما هو Nota؟</h2>
+                <p class="section-subtitle">تطبيق ثوري يغيّر طريقة تسجيل وتنظيم أفكارك</p>
             </div>
             
-            <!-- Floating Elements -->
-            <div class="floating-card card-1">
-                <i class="fas fa-brain"></i>
-                <span>AI تصنيف ذكي</span>
-            </div>
-            <div class="floating-card card-2">
-                <i class="fas fa-microphone"></i>
-                <span>إدخال صوتي</span>
-            </div>
-            <div class="floating-card card-3">
-                <i class="fas fa-shield-alt"></i>
-                <span>آمن 100%</span>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="about-description">
+                        <strong>Nota</strong> هو تطبيق ملاحظات ذكي مدعوم بالذكاء الاصطناعي من Google (Gemini 2.5 Flash). 
+                        ببساطة اكتب ما تفكر فيه - سواء كان موعداً، مهمة، مصروفاً، أو ملاحظة شخصية - 
+                        وسيقوم الذكاء الاصطناعي بتصنيفها تلقائياً واستخراج المعلومات المهمة مثل التواريخ والمبالغ والأولويات.
+                    </p>
+                    
+                    <div class="about-features">
+                        <div class="about-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>دعم كامل للغة العربية والإنجليزية</span>
+                        </div>
+                        <div class="about-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>تصنيف تلقائي ذكي للملاحظات</span>
+                        </div>
+                        <div class="about-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>إدخال متعدد: نص، صوت، كاميرا</span>
+                        </div>
+                        <div class="about-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>مزامنة سحابية مع Firebase</span>
+                        </div>
+                        <div class="about-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>6 طرق تسجيل دخول آمنة</span>
+                        </div>
+                        <div class="about-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>تصميم عصري وأنيق</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-visual">
+                    <div class="category-cards">
+                        <div class="category-card tasks">
+                            <div class="category-icon"><i class="fas fa-tasks"></i></div>
+                            <h4>المهام</h4>
+                            <p>مهام مع أولويات ومهام فرعية وتواريخ استحقاق</p>
+                        </div>
+                        <div class="category-card appointments">
+                            <div class="category-icon"><i class="fas fa-calendar-alt"></i></div>
+                            <h4>المواعيد</h4>
+                            <p>جدولة ذكية مع تذكيرات وإشعارات</p>
+                        </div>
+                        <div class="category-card expenses">
+                            <div class="category-icon"><i class="fas fa-wallet"></i></div>
+                            <h4>المصروفات</h4>
+                            <p>تتبع نفقاتك مع تصنيفات ذكية</p>
+                        </div>
+                        <div class="category-card notes">
+                            <div class="category-icon"><i class="fas fa-sticky-note"></i></div>
+                            <h4>الملاحظات</h4>
+                            <p>ملاحظات شخصية واقتباسات ملهمة</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Features Section -->
     <section class="features" id="features">
-        <div class="container">
+        <div class="section-container">
             <div class="section-header">
-                <span class="section-tag">المميزات</span>
+                <span class="section-badge">المميزات</span>
                 <h2 class="section-title">كل ما تحتاجه في تطبيق واحد</h2>
+                <p class="section-subtitle">اكتشف قوة الذكاء الاصطناعي في تنظيم حياتك اليومية</p>
             </div>
             
-            <div class="features-grid">
-                <div class="feature-card featured">
-                    <div class="feature-icon">
-                        <i class="fas fa-robot"></i>
+            <div class="features-showcase">
+                <!-- Main Feature - AI -->
+                <div class="feature-main">
+                    <div class="feature-main-content">
+                        <div class="feature-icon-large">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3>ذكاء اصطناعي Gemini 2.5 Flash</h3>
+                        <p>أحدث وأسرع نموذج ذكاء اصطناعي من Google. يحلل ملاحظاتك ويصنفها تلقائياً في أقل من ثانية. يستخرج التواريخ، المبالغ المالية، والأولويات بدقة فائقة.</p>
+                        <div class="feature-tags">
+                            <span class="tag">تصنيف تلقائي</span>
+                            <span class="tag">استخراج التواريخ</span>
+                            <span class="tag">كشف المبالغ</span>
+                            <span class="tag">تحليل الأولويات</span>
+                        </div>
                     </div>
-                    <h3>ذكاء اصطناعي Gemini</h3>
-                    <p>يصنف ملاحظاتك تلقائياً ويستخرج التواريخ والمبالغ والأولويات بدقة عالية</p>
-                    <div class="feature-glow"></div>
+                    <div class="feature-main-visual">
+                        <div class="ai-animation">
+                            <div class="ai-circle"></div>
+                            <div class="ai-ring ai-ring-1"></div>
+                            <div class="ai-ring ai-ring-2"></div>
+                            <div class="ai-ring ai-ring-3"></div>
+                            <i class="fas fa-microchip ai-core"></i>
+                        </div>
+                    </div>
                 </div>
                 
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-microphone-alt"></i>
+                <!-- Feature Grid -->
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-card-icon">
+                            <i class="fas fa-keyboard"></i>
+                        </div>
+                        <h4>إدخال نصي</h4>
+                        <p>اكتب أفكارك بشكل طبيعي والذكاء الاصطناعي يفهمها</p>
                     </div>
-                    <h3>إدخال متعدد</h3>
-                    <p>نص، صوت، كاميرا، أو معرض الصور - اختر الطريقة المناسبة لك</p>
+                    
+                    <div class="feature-card">
+                        <div class="feature-card-icon">
+                            <i class="fas fa-microphone"></i>
+                        </div>
+                        <h4>إدخال صوتي</h4>
+                        <p>تحدث وسيتم تحويل كلامك لنص ثم تصنيفه</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-card-icon">
+                            <i class="fas fa-camera"></i>
+                        </div>
+                        <h4>مسح بالكاميرا</h4>
+                        <p>صوّر الفواتير والإيصالات واستخرج المعلومات</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-card-icon">
+                            <i class="fas fa-image"></i>
+                        </div>
+                        <h4>معرض الصور</h4>
+                        <p>اختر صوراً من معرضك لتحليلها بالذكاء الاصطناعي</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-card-icon">
+                            <i class="fas fa-fingerprint"></i>
+                        </div>
+                        <h4>أمان متقدم</h4>
+                        <p>6 طرق تسجيل دخول مع دعم البصمة والوجه</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-card-icon">
+                            <i class="fas fa-cloud"></i>
+                        </div>
+                        <h4>مزامنة سحابية</h4>
+                        <p>بياناتك محفوظة ومتزامنة مع Firebase</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works" id="how-it-works">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-badge">كيف يعمل</span>
+                <h2 class="section-title">ثلاث خطوات بسيطة</h2>
+                <p class="section-subtitle">من الفكرة إلى التنظيم في ثوانٍ</p>
+            </div>
+            
+            <div class="steps-container">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-icon"><i class="fas fa-edit"></i></div>
+                    <h4>أدخل ملاحظتك</h4>
+                    <p>اكتب، تحدث، أو صوّر - اختر الطريقة المناسبة لك. الذكاء الاصطناعي يفهم العربية والإنجليزية.</p>
                 </div>
                 
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-tasks"></i>
-                    </div>
-                    <h3>إدارة المهام</h3>
-                    <p>مهام مع أولويات ومهام فرعية وتواريخ استحقاق</p>
+                <div class="step-arrow"><i class="fas fa-arrow-left"></i></div>
+                
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-icon"><i class="fas fa-magic"></i></div>
+                    <h4>التحليل الذكي</h4>
+                    <p>Gemini 2.5 Flash يحلل النص ويستخرج التواريخ والمبالغ ويحدد نوع الملاحظة والأولوية.</p>
                 </div>
                 
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-calendar-check"></i>
-                    </div>
-                    <h3>المواعيد</h3>
-                    <p>جدولة ذكية مع تذكيرات وتكامل التقويم</p>
-                </div>
+                <div class="step-arrow"><i class="fas fa-arrow-left"></i></div>
                 
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-wallet"></i>
-                    </div>
-                    <h3>تتبع المصروفات</h3>
-                    <p>سجل مصاريفك مع التصنيفات والإحصائيات</p>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-icon"><i class="fas fa-check-double"></i></div>
+                    <h4>تنظيم تلقائي</h4>
+                    <p>ملاحظتك تُصنف وتُحفظ في المكان المناسب: مهام، مواعيد، مصروفات، أو ملاحظات.</p>
                 </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-fingerprint"></i>
+            </div>
+            
+            <div class="example-box">
+                <h4><i class="fas fa-lightbulb"></i> مثال عملي</h4>
+                <div class="example-content">
+                    <div class="example-input">
+                        <span class="label">أنت تكتب:</span>
+                        <p>"اجتماع مع أحمد بكرة الساعة 3 في المكتب"</p>
                     </div>
-                    <h3>أمان متقدم</h3>
-                    <p>6 طرق تسجيل دخول مع دعم البصمة والوجه</p>
+                    <div class="example-arrow"><i class="fas fa-wand-magic-sparkles"></i></div>
+                    <div class="example-output">
+                        <span class="label">Nota يفهم:</span>
+                        <div class="output-tags">
+                            <span class="output-tag type"><i class="fas fa-calendar"></i> موعد</span>
+                            <span class="output-tag date"><i class="fas fa-clock"></i> غداً 3:00 م</span>
+                            <span class="output-tag location"><i class="fas fa-map-marker-alt"></i> المكتب</span>
+                            <span class="output-tag person"><i class="fas fa-user"></i> أحمد</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -188,79 +385,132 @@
 
     <!-- Screenshots Section -->
     <section class="screenshots" id="screenshots">
-        <div class="container">
+        <div class="section-container">
             <div class="section-header">
-                <span class="section-tag">التطبيق</span>
-                <h2 class="section-title">شاهد بنفسك</h2>
+                <span class="section-badge">شاشات التطبيق</span>
+                <h2 class="section-title">تصميم عصري وأنيق</h2>
+                <p class="section-subtitle">واجهة مستخدم جميلة مع دعم كامل للغة العربية RTL</p>
             </div>
             
-            <div class="screenshots-wrapper">
-                <div class="screenshots-track" id="screenshotsTrack">
+            <div class="screenshots-carousel">
+                <div class="carousel-track" id="carouselTrack">
                     <div class="screenshot-item">
-                        <img src="images/screenshots/splash.png" alt="Splash">
-                        <span>البداية</span>
+                        <img src="images/screenshots/splash.png" alt="Splash Screen">
+                        <span class="screenshot-label">شاشة البداية</span>
                     </div>
                     <div class="screenshot-item">
                         <img src="images/screenshots/login.png" alt="Login">
-                        <span>تسجيل الدخول</span>
+                        <span class="screenshot-label">تسجيل الدخول</span>
                     </div>
                     <div class="screenshot-item">
                         <img src="images/screenshots/register.png" alt="Register">
-                        <span>إنشاء حساب</span>
+                        <span class="screenshot-label">إنشاء حساب</span>
                     </div>
                     <div class="screenshot-item active">
                         <img src="images/screenshots/Dashboard.png" alt="Dashboard">
-                        <span>لوحة التحكم</span>
+                        <span class="screenshot-label">لوحة التحكم</span>
                     </div>
                     <div class="screenshot-item">
                         <img src="images/screenshots/ai_input.png" alt="AI Input">
-                        <span>الإدخال الذكي</span>
+                        <span class="screenshot-label">الإدخال الذكي</span>
                     </div>
                     <div class="screenshot-item">
                         <img src="images/screenshots/tasks.png" alt="Tasks">
-                        <span>المهام</span>
+                        <span class="screenshot-label">المهام</span>
                     </div>
                     <div class="screenshot-item">
                         <img src="images/screenshots/appointments.png" alt="Appointments">
-                        <span>المواعيد</span>
+                        <span class="screenshot-label">المواعيد</span>
                     </div>
                     <div class="screenshot-item">
-                        <img src="images/screenshots/track-money.png" alt="Track Money">
-                        <span>المصروفات</span>
+                        <img src="images/screenshots/track-money.png" alt="Expenses">
+                        <span class="screenshot-label">المصروفات</span>
                     </div>
                     <div class="screenshot-item">
                         <img src="images/screenshots/qoutes.png" alt="Quotes">
-                        <span>الاقتباسات</span>
+                        <span class="screenshot-label">الاقتباسات</span>
                     </div>
+                </div>
+                
+                <div class="carousel-controls">
+                    <button class="carousel-btn prev" id="prevBtn">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                    <div class="carousel-dots" id="carouselDots"></div>
+                    <button class="carousel-btn next" id="nextBtn">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Platforms Section -->
-    <section class="platforms">
-        <div class="container">
-            <div class="platforms-content">
-                <h2>متوفر على جميع المنصات</h2>
-                <div class="platforms-icons">
-                    <div class="platform-icon" title="Android">
-                        <i class="fab fa-android"></i>
-                    </div>
-                    <div class="platform-icon" title="iOS">
-                        <i class="fab fa-apple"></i>
-                    </div>
-                    <div class="platform-icon" title="Web">
-                        <i class="fas fa-globe"></i>
-                    </div>
-                    <div class="platform-icon" title="Windows">
-                        <i class="fab fa-windows"></i>
-                    </div>
-                    <div class="platform-icon" title="macOS">
-                        <i class="fab fa-apple"></i>
-                    </div>
-                    <div class="platform-icon" title="Linux">
-                        <i class="fab fa-linux"></i>
-                    </div>
+    <!-- Auth Methods Section -->
+    <section class="auth-methods">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-badge">الأمان</span>
+                <h2 class="section-title">6 طرق تسجيل دخول آمنة</h2>
+                <p class="section-subtitle">اختر الطريقة المناسبة لك</p>
+            </div>
+            
+            <div class="auth-grid">
+                <div class="auth-card">
+                    <div class="auth-icon email"><i class="fas fa-envelope"></i></div>
+                    <span>البريد الإلكتروني</span>
+                </div>
+                <div class="auth-card">
+                    <div class="auth-icon google"><i class="fab fa-google"></i></div>
+                    <span>Google</span>
+                </div>
+                <div class="auth-card">
+                    <div class="auth-icon facebook"><i class="fab fa-facebook-f"></i></div>
+                    <span>Facebook</span>
+                </div>
+                <div class="auth-card">
+                    <div class="auth-icon github"><i class="fab fa-github"></i></div>
+                    <span>GitHub</span>
+                </div>
+                <div class="auth-card">
+                    <div class="auth-icon apple"><i class="fab fa-apple"></i></div>
+                    <span>Apple</span>
+                </div>
+                <div class="auth-card">
+                    <div class="auth-icon biometric"><i class="fas fa-fingerprint"></i></div>
+                    <span>البصمة / الوجه</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Stack Section -->
+    <section class="tech-stack">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-badge">التقنيات</span>
+                <h2 class="section-title">مبني بأحدث التقنيات</h2>
+            </div>
+            
+            <div class="tech-logos">
+                <div class="tech-item">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" alt="Flutter">
+                    <span>Flutter</span>
+                    <small>واجهة المستخدم</small>
+                </div>
+                <div class="tech-item">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg" alt="Dart">
+                    <span>Dart</span>
+                    <small>لغة البرمجة</small>
+                </div>
+                <div class="tech-item">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" alt="Firebase">
+                    <span>Firebase</span>
+                    <small>قاعدة البيانات</small>
+                </div>
+                <div class="tech-item gemini">
+                    <i class="fas fa-robot"></i>
+                    <span>Gemini 2.5</span>
+                    <small>الذكاء الاصطناعي</small>
                 </div>
             </div>
         </div>
@@ -268,45 +518,55 @@
 
     <!-- Download Section -->
     <section class="download" id="download">
-        <div class="container">
+        <div class="section-container">
             <div class="download-card">
                 <div class="download-glow"></div>
                 <div class="download-content">
-                    <h2>جاهز للتحميل</h2>
-                    <p>حمّل التطبيق الآن مجاناً وابدأ تنظيم حياتك بذكاء</p>
+                    <div class="download-icon">
+                        <i class="fab fa-android"></i>
+                    </div>
+                    <h2>حمّل التطبيق الآن</h2>
+                    <p>التطبيق متاح حالياً لأجهزة الأندرويد. مجاني بالكامل ومفتوح المصدر.</p>
                     
-                    <div class="download-buttons">
-                        <a href="nota-app.apk" download class="download-btn primary">
-                            <div class="btn-icon">
-                                <i class="fab fa-android"></i>
-                            </div>
-                            <div class="btn-text">
-                                <small>تحميل مباشر</small>
-                                <strong>Android APK</strong>
-                            </div>
-                            <div class="btn-arrow">
-                                <i class="fas fa-download"></i>
-                            </div>
-                        </a>
-                        
-                        <a href="https://github.com/Lord-shaban/Nota/releases" target="_blank" class="download-btn secondary">
-                            <div class="btn-icon">
-                                <i class="fab fa-github"></i>
-                            </div>
-                            <div class="btn-text">
-                                <small>جميع الإصدارات</small>
-                                <strong>GitHub Releases</strong>
-                            </div>
-                            <div class="btn-arrow">
-                                <i class="fas fa-external-link-alt"></i>
-                            </div>
-                        </a>
+                    <a href="https://drive.google.com/file/d/1xdUr_jCQfuR9W_74YBoAmaC08SI3zzO7/view?usp=sharing" id="downloadBtn" class="download-btn-main" target="_blank">
+                        <div class="btn-icon">
+                            <i class="fab fa-android"></i>
+                        </div>
+                        <div class="btn-content">
+                            <span class="btn-small">تحميل مجاني</span>
+                            <span class="btn-large">Android APK</span>
+                        </div>
+                        <div class="btn-arrow">
+                            <i class="fas fa-download"></i>
+                        </div>
+                    </a>
+                    
+                    <div class="download-note">
+                        <i class="fas fa-info-circle"></i>
+                        <span>رابط التحميل سيُضاف قريباً</span>
                     </div>
                     
-                    <div class="download-info">
-                        <span><i class="fas fa-check-circle"></i> مجاني 100%</span>
-                        <span><i class="fas fa-check-circle"></i> مفتوح المصدر</span>
-                        <span><i class="fas fa-check-circle"></i> بدون إعلانات</span>
+                    <div class="download-features">
+                        <div class="download-feature">
+                            <i class="fas fa-check"></i>
+                            <span>مجاني 100%</span>
+                        </div>
+                        <div class="download-feature">
+                            <i class="fas fa-check"></i>
+                            <span>بدون إعلانات</span>
+                        </div>
+                        <div class="download-feature">
+                            <i class="fas fa-check"></i>
+                            <span>مفتوح المصدر</span>
+                        </div>
+                    </div>
+                    
+                    <div class="github-link-section">
+                        <span>أو شاهد الكود المصدري</span>
+                        <a href="https://github.com/Lord-shaban/Nota" target="_blank" class="github-link">
+                            <i class="fab fa-github"></i>
+                            GitHub
+                        </a>
                     </div>
                 </div>
             </div>
@@ -315,36 +575,50 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <img src="images/logo.png" alt="Nota">
-                    <span>Nota</span>
+        <div class="footer-container">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <img src="images/logo.png" alt="Nota" class="footer-logo">
+                    <h3>Nota</h3>
+                    <p>تطبيق الملاحظات الذكي المدعوم بالذكاء الاصطناعي Gemini 2.5 Flash</p>
                 </div>
                 
                 <div class="footer-links">
-                    <a href="https://github.com/Lord-shaban/Nota" target="_blank">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="https://github.com/Lord-shaban/Nota/releases" target="_blank">
-                        <i class="fas fa-download"></i>
-                    </a>
-                    <a href="https://github.com/Lord-shaban/Nota/issues" target="_blank">
-                        <i class="fas fa-bug"></i>
-                    </a>
+                    <div class="footer-column">
+                        <h4>التطبيق</h4>
+                        <a href="#about">عن التطبيق</a>
+                        <a href="#features">المميزات</a>
+                        <a href="#screenshots">الشاشات</a>
+                        <a href="#download">تحميل</a>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>المصادر</h4>
+                        <a href="https://github.com/Lord-shaban/Nota" target="_blank">GitHub</a>
+                        <a href="https://github.com/Lord-shaban/Nota/blob/main/README.md" target="_blank">التوثيق</a>
+                        <a href="https://github.com/Lord-shaban/Nota/blob/main/CONTRIBUTING.md" target="_blank">المساهمة</a>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>قانوني</h4>
+                        <a href="https://github.com/Lord-shaban/Nota/blob/main/LICENSE" target="_blank">رخصة MIT</a>
+                        <a href="https://github.com/Lord-shaban/Nota/blob/main/SECURITY.md" target="_blank">الأمان</a>
+                    </div>
                 </div>
             </div>
             
             <div class="footer-bottom">
-                <p>© 2026 Nota Team. مفتوح المصدر برخصة MIT</p>
+                <div class="footer-social">
+                    <a href="https://github.com/Lord-shaban/Nota" target="_blank" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+                <p class="copyright">
+                    © 2026 Nota. مشروع مفتوح المصدر برخصة MIT
+                </p>
             </div>
         </div>
     </footer>
-
-    <!-- Back to Top -->
-    <button class="back-top" id="backTop" aria-label="العودة للأعلى">
-        <i class="fas fa-chevron-up"></i>
-    </button>
 
     <script src="js/main.js"></script>
 </body>

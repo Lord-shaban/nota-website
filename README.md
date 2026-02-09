@@ -2,75 +2,112 @@
 
 # 📝 Nota Landing Page
 
-### Modern Landing Page for the Nota App
+### صفحة هبوط عصرية لتطبيق Nota
 
-[![Vercel](https://img.shields.io/badge/Vercel-Deployed-black?style=for-the-badge&logo=vercel)](https://nota-app.vercel.app)
+[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Live-success?style=for-the-badge&logo=github)](https://lord-shaban.github.io/nota-website/)
 [![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](/)
 [![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](/)
 [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](/)
 
 <br/>
 
-[🌐 Live Demo](https://nota-app.vercel.app) • [📱 Nota App](https://github.com/Lord-shaban/nota)
+<img src="images/screenshots/Dashboard.png" alt="Nota Preview" width="200">
+
+<br/>
+
+[🌐 Live Demo](https://lord-shaban.github.io/nota-website/) • [📱 Nota App](https://github.com/Lord-shaban/Nota) • [⬇️ Download](https://github.com/Lord-shaban/Nota/releases)
 
 </div>
 
 ---
 
-## 🎯 About
+## 🎯 نبذة عن المشروع
 
-This is the official landing page for **Nota** - an AI-powered smart notes and diary application. The website showcases the app's features, supported platforms, and provides download links.
+صفحة هبوط احترافية لتطبيق **Nota** - تطبيق ملاحظات ذكي مدعوم بالذكاء الاصطناعي Gemini 2.5 Flash. الموقع يعرض ميزات التطبيق والمنصات المدعومة وروابط التحميل.
 
-## ✨ Features
+## ✨ مميزات الموقع
 
-- 🎨 **Modern Design** - Clean, professional UI with gradient effects
-- 📱 **Fully Responsive** - Looks great on all devices
-- 🌙 **Dark Theme** - Easy on the eyes
-- 🇸🇦 **RTL Support** - Full Arabic language support
-- ⚡ **Fast Loading** - Optimized for performance
-- 🎬 **Smooth Animations** - Engaging user experience
+| الميزة | الوصف |
+|--------|--------|
+| 🎨 **تصميم عصري** | واجهة نظيفة واحترافية مع تأثيرات gradient |
+| 📱 **متجاوب بالكامل** | يظهر بشكل مثالي على جميع الأجهزة |
+| 🌙 **ثيم داكن** | مريح للعين |
+| 🇸🇦 **دعم RTL** | دعم كامل للغة العربية |
+| ⚡ **سريع التحميل** | محسّن للأداء |
+| 🎬 **أنيميشن سلس** | تجربة مستخدم جذابة |
+| ❓ **قسم FAQ** | أسئلة شائعة تفاعلية |
+| 🔝 **زر العودة للأعلى** | تنقل سهل |
 
-## 🚀 Quick Start
+## 📸 لقطات الشاشة
 
-### Deploy to Vercel
+<div align="center">
+<table>
+<tr>
+<td><img src="images/screenshots/splash.png" alt="Splash" width="120"></td>
+<td><img src="images/screenshots/login.png" alt="Login" width="120"></td>
+<td><img src="images/screenshots/Dashboard.png" alt="Dashboard" width="120"></td>
+<td><img src="images/screenshots/ai_input.png" alt="AI Input" width="120"></td>
+<td><img src="images/screenshots/tasks.png" alt="Tasks" width="120"></td>
+</tr>
+<tr>
+<td align="center">البداية</td>
+<td align="center">تسجيل الدخول</td>
+<td align="center">لوحة التحكم</td>
+<td align="center">الإدخال الذكي</td>
+<td align="center">المهام</td>
+</tr>
+</table>
+</div>
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/Lord-shaban/nota-website)
+## 🚀 البدء السريع
 
-### Local Development
+### النشر على GitHub Pages
 
-1. Clone the repository:
+الموقع منشور تلقائياً على: https://lord-shaban.github.io/nota-website/
+
+### التطوير المحلي
+
+1. استنساخ المستودع:
 ```bash
 git clone https://github.com/Lord-shaban/nota-website.git
 cd nota-website
 ```
 
-2. Open with Live Server or any static file server:
+2. تشغيل خادم محلي:
 ```bash
-# Using Python
+# باستخدام Python
 python -m http.server 8000
 
-# Using Node.js (npx)
+# باستخدام Node.js
 npx serve
+
+# باستخدام PHP
+php -S localhost:8000
 ```
 
-3. Open `http://localhost:8000` in your browser.
+3. افتح `http://localhost:8000` في المتصفح.
 
-## 📁 Project Structure
+## 📁 هيكل المشروع
 
 ```
 nota-website/
-├── index.html          # Main HTML page
-├── vercel.json         # Vercel configuration
-├── css/
-│   └── style.css       # All styles
-├── js/
-│   └── main.js         # JavaScript interactions
-└── images/
-    ├── logo.png        # App logo
-    ├── favicon.png     # Browser favicon
-    ├── app-preview.png # Hero section mockup
-    ├── og-image.png    # Social media preview
-    └── screenshots/    # App screenshots
+├── 📄 index.html           # الصفحة الرئيسية
+├── 📄 vercel.json          # إعدادات Vercel
+├── 📄 README.md            # التوثيق
+│
+├── 📁 css/
+│   └── 🎨 style.css        # جميع الأنماط (1100+ سطر)
+│
+├── 📁 js/
+│   └── ⚡ main.js          # التفاعلات والأنيميشن (280+ سطر)
+│
+└── 📁 images/
+    ├── 🖼️ logo.png         # شعار التطبيق
+    ├── 🖼️ favicon.png      # أيقونة المتصفح
+    ├── 🖼️ app-preview.png  # معاينة الهيرو
+    ├── 🖼️ og-image.png     # صورة المشاركة
+    │
+    └── 📁 screenshots/     # لقطات التطبيق (10 صور)
         ├── splash.png
         ├── login.png
         ├── register.png
@@ -83,74 +120,106 @@ nota-website/
         └── qoutes.png
 ```
 
-## 🖼️ Adding Your Images
+## 🎨 أقسام الموقع
 
-Replace the placeholder images in the `images/` folder:
+| القسم | الوصف |
+|-------|--------|
+| **Hero** | البطل - العنوان الرئيسي وزر التحميل |
+| **Features** | عرض 6 ميزات رئيسية للتطبيق |
+| **How It Works** | شرح 3 خطوات لاستخدام التطبيق |
+| **Auth Methods** | طرق تسجيل الدخول الـ 6 |
+| **Screenshots** | معرض 10 لقطات شاشة |
+| **Tech Stack** | التقنيات المستخدمة |
+| **Platforms** | المنصات الـ 6 المدعومة |
+| **FAQ** | 5 أسئلة شائعة تفاعلية |
+| **Download** | أزرار التحميل |
+| **Footer** | التذييل مع روابط سريعة |
 
-| Image | Size | Description |
-|-------|------|-------------|
-| `logo.png` | 180x180 | App logo (square) |
-| `favicon.png` | 32x32 | Browser favicon |
-| `app-preview.png` | 300x600 | Hero section phone mockup |
-| `og-image.png` | 1200x630 | Social media preview image |
-| `screenshots/*.png` | 220x450 | App screenshots |
+## 🔧 التخصيص
 
-## 🔧 Customization
-
-### Change App Links
-
-Update the GitHub and download links in `index.html`:
-
-```html
-<!-- GitHub link -->
-<a href="https://github.com/YOUR-USERNAME/nota" target="_blank">
-
-<!-- Download buttons -->
-<a href="YOUR-GOOGLE-PLAY-LINK" class="download-btn android">
-<a href="YOUR-APP-STORE-LINK" class="download-btn ios">
-```
-
-### Change Colors
-
-Edit the CSS variables in `css/style.css`:
+### تغيير الألوان الرئيسية
 
 ```css
+/* css/style.css */
 :root {
-    --primary: #6366f1;
-    --secondary: #10b981;
-    --accent: #f59e0b;
-    /* ... */
+    --primary: #6366f1;        /* اللون الأساسي */
+    --primary-dark: #4f46e5;   /* الأساسي الداكن */
+    --primary-light: #818cf8;  /* الأساسي الفاتح */
+    --secondary: #10b981;      /* اللون الثانوي */
+    --accent: #f59e0b;         /* لون التمييز */
+    --background: #0f0f1a;     /* لون الخلفية */
+    --surface: #1a1a2e;        /* لون السطح */
 }
 ```
 
-## 🌐 Deployment
+### تغيير روابط التحميل
 
-### Vercel (Recommended)
+```html
+<!-- index.html -->
+<a href="YOUR-GOOGLE-PLAY-LINK" class="download-btn android">
+<a href="YOUR-APP-STORE-LINK" class="download-btn ios">
+<a href="YOUR-GITHUB-RELEASES" class="download-btn github">
+```
 
-1. Push your code to GitHub
-2. Go to [vercel.com](https://vercel.com)
-3. Import your repository
-4. Click Deploy
+## 🌐 خيارات النشر
 
-### Manual Deploy
+| المنصة | الطريقة |
+|--------|---------|
+| **GitHub Pages** | ✅ مفعّل تلقائياً |
+| **Vercel** | Import من GitHub |
+| **Netlify** | Drag & Drop أو Git |
+| **CloudFlare Pages** | ربط المستودع |
 
-Since this is a static website, you can host it anywhere:
-- **Netlify**: Drag & drop the folder
-- **GitHub Pages**: Enable in repository settings
-- **CloudFlare Pages**: Connect your repository
+## 📱 المشاريع المرتبطة
 
-## 📱 Related
+| المشروع | الوصف |
+|---------|--------|
+| [Nota App](https://github.com/Lord-shaban/Nota) | تطبيق Flutter الرئيسي |
+| [Nota Releases](https://github.com/Lord-shaban/Nota/releases) | إصدارات التحميل |
 
-- [Nota App Repository](https://github.com/Lord-shaban/nota) - The main Flutter application
+## 🛠️ التقنيات المستخدمة
 
-## 📄 License
+<div align="center">
 
-MIT License - feel free to use this template for your own projects!
+| التقنية | الاستخدام |
+|---------|----------|
+| ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white) | هيكل الصفحة |
+| ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white) | التصميم والأنيميشن |
+| ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black) | التفاعلات |
+| ![Font Awesome](https://img.shields.io/badge/Font%20Awesome-339AF0?style=flat&logo=fontawesome&logoColor=white) | الأيقونات |
+| ![Google Fonts](https://img.shields.io/badge/Google%20Fonts-4285F4?style=flat&logo=google&logoColor=white) | خط Tajawal |
+
+</div>
+
+## 📄 الترخيص
+
+هذا المشروع مرخص تحت رخصة MIT - يمكنك استخدامه بحرية لمشاريعك!
+
+## 🤝 المساهمة
+
+المساهمات مرحب بها! 
+
+1. Fork المستودع
+2. أنشئ branch جديد (`git checkout -b feature/amazing-feature`)
+3. Commit تغييراتك (`git commit -m 'Add amazing feature'`)
+4. Push إلى البرانش (`git push origin feature/amazing-feature`)
+5. افتح Pull Request
 
 ---
 
 <div align="center">
 
-Made with ❤️ for the Nota App
+### 🔗 روابط مهمة
+
+[🌐 الموقع](https://lord-shaban.github.io/nota-website/) • 
+[📱 التطبيق](https://github.com/Lord-shaban/Nota) • 
+[⬇️ التحميل](https://github.com/Lord-shaban/Nota/releases) • 
+[🐛 الإبلاغ عن مشكلة](https://github.com/Lord-shaban/nota-website/issues)
+
+<br/>
+
+صُنع بـ ❤️ لتطبيق Nota
+
+**© 2026 Nota. MIT License.**
 
 </div>

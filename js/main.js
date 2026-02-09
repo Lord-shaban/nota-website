@@ -1,5 +1,6 @@
 // ===== Navbar Scroll Effect =====
 const navbar = document.getElementById('navbar');
+const backToTop = document.getElementById('backToTop');
 
 window.addEventListener('scroll', () => {
     if (window.scrollY > 50) {
@@ -7,7 +8,24 @@ window.addEventListener('scroll', () => {
     } else {
         navbar.classList.remove('scrolled');
     }
+    
+    // Back to top visibility
+    if (window.scrollY > 500) {
+        backToTop.classList.add('visible');
+    } else {
+        backToTop.classList.remove('visible');
+    }
 });
+
+// Back to top click
+if (backToTop) {
+    backToTop.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+}
 
 // ===== Mobile Menu Toggle =====
 const mobileMenuBtn = document.getElementById('mobileMenuBtn');
@@ -213,3 +231,82 @@ document.addEventListener('DOMContentLoaded', preloadImages);
 console.log('%c📝 Nota', 'font-size: 32px; font-weight: bold; color: #6366f1;');
 console.log('%cAI-Powered Smart Notes App', 'font-size: 14px; color: #a1a1aa;');
 console.log('%cBuilt with ❤️ using Flutter & Firebase', 'font-size: 12px; color: #10b981;');
+
+// ===== FAQ Accordion =====
+const faqItems = document.querySelectorAll('.faq-item');
+
+faqItems.forEach(item => {
+    const question = item.querySelector('.faq-question');
+    
+    question.addEventListener('click', () => {
+        // Close other items
+        faqItems.forEach(otherItem => {
+            if (otherItem !== item && otherItem.classList.contains('active')) {
+                otherItem.classList.remove('active');
+            }
+        });
+        
+        // Toggle current item
+        item.classList.toggle('active');
+    });
+});
+
+// ===== Observe new sections for animations =====
+document.querySelectorAll('.step-card, .faq-item').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(30px)';
+    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    observer.observe(el);
+});
+
+animateGridItems('.step-card', 150);
+
+// ===== Typing Effect for Hero =====
+const gradientText = document.querySelector('.gradient-text');
+if (gradientText) {
+    const originalText = gradientText.textContent;
+    gradientText.innerHTML = `<span class="typing-text">${originalText}</span>`;
+}
+
+// ===== Particle Background Effect =====
+const createParticle = () => {
+    const hero = document.querySelector('.hero-bg');
+    if (!hero) return;
+    
+    const particle = document.createElement('div');
+    particle.style.cssText = `
+        position: absolute;
+        width: 4px;
+        height: 4px;
+        background: rgba(99, 102, 241, 0.5);
+        border-radius: 50%;
+        pointer-events: none;
+        animation: floatUp 8s linear infinite;
+    `;
+    particle.style.left = Math.random() * 100 + '%';
+    particle.style.bottom = '-20px';
+    
+    hero.appendChild(particle);
+    
+    setTimeout(() => particle.remove(), 8000);
+};
+
+// Create particles periodically
+setInterval(createParticle, 500);
+
+// Add float animation
+document.head.insertAdjacentHTML('beforeend', `
+    <style>
+        @keyframes floatUp {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100vh) rotate(720deg);
+                opacity: 0;
+            }
+        }
+    </style>
+`);
+

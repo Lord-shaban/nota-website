@@ -73,6 +73,7 @@
 html {
     scroll-behavior: smooth;
     scroll-padding-top: var(--nav-height);
+    overflow-x: hidden;
 }
 
 body {
@@ -83,6 +84,8 @@ body {
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    width: 100%;
+    min-width: 100%;
 }
 
 ::selection {
@@ -126,6 +129,7 @@ button {
     pointer-events: none;
     z-index: -1;
     overflow: hidden;
+    max-width: 100vw;
 }
 
 .orb {
@@ -676,6 +680,8 @@ button {
 section {
     padding: 120px 0;
     position: relative;
+    width: 100%;
+    overflow-x: hidden;
 }
 
 .section-header {
@@ -1786,6 +1792,26 @@ section {
         grid-template-columns: 1fr;
         gap: 24px;
     }
+    
+    /* Reduce orb sizes on medium devices to prevent overflow */
+    .orb-1 {
+        width: 400px;
+        height: 400px;
+        top: -150px;
+        right: -150px;
+    }
+    
+    .orb-2 {
+        width: 350px;
+        height: 350px;
+        bottom: -100px;
+        left: -100px;
+    }
+    
+    .orb-3 {
+        width: 280px;
+        height: 280px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -1810,6 +1836,26 @@ section {
     .download-features {
         flex-direction: column;
         gap: 12px;
+    }
+    
+    /* Reduce orb sizes on mobile to prevent overflow */
+    .orb-1 {
+        width: 300px;
+        height: 300px;
+        top: -100px;
+        right: -100px;
+    }
+    
+    .orb-2 {
+        width: 250px;
+        height: 250px;
+        bottom: -75px;
+        left: -75px;
+    }
+    
+    .orb-3 {
+        width: 200px;
+        height: 200px;
     }
 }
 

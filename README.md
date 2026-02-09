@@ -11,7 +11,7 @@
 
 <br/>
 
-[🌐 Live Demo](https://nota-app.vercel.app) • [📱 Nota App](https://github.com/your-username/nota)
+[🌐 Live Demo](https://nota-app.vercel.app) • [📱 Nota App](https://github.com/Lord-shaban/nota)
 
 </div>
 
@@ -34,13 +34,13 @@ This is the official landing page for **Nota** - an AI-powered smart notes and d
 
 ### Deploy to Vercel
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/your-username/nota-website)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/Lord-shaban/nota-website)
 
 ### Local Development
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/your-username/nota-website.git
+git clone https://github.com/Lord-shaban/nota-website.git
 cd nota-website
 ```
 
@@ -136,7 +136,7 @@ Since this is a static website, you can host it anywhere:
 
 ## 📱 Related
 
-- [Nota App Repository](https://github.com/your-username/nota) - The main Flutter application
+- [Nota App Repository](https://github.com/Lord-shaban/nota) - The main Flutter application
 
 ## 📄 License
 

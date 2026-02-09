@@ -375,7 +375,7 @@ This website is deployed on **Vercel** for automatic deployments on every push.
 
 | Platform | Link | Requirements |
 |:--------:|:----:|:-------------|
-| 📱 Android | [**Download APK**](https://drive.google.com/file/d/1xdUr_jCQfuR9W_74YBoAmaC08SI3zzO7/view?usp=sharing) | Android 5.0+ (~30 MB) |
+| 📱 Android | [**Download APK**](https://drive.google.com/file/d/1xdUr_jCQfuR9W_74YBoAmaC08SI3zzO7/view?usp=sharing) | Android 5.0+ (~61 MB) |
 | 🍎 iOS | Coming Soon | - |
 
 </div>

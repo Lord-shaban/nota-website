@@ -73,9 +73,14 @@ nota-website/
     └── screenshots/    # App screenshots
         ├── splash.png
         ├── login.png
-        ├── dashboard.png
-        ├── ai-input.png
-        └── tasks.png
+        ├── register.png
+        ├── forgot_password.png
+        ├── Dashboard.png
+        ├── ai_input.png
+        ├── tasks.png
+        ├── appointments.png
+        ├── track-money.png
+        └── qoutes.png
 ```
 
 ## 🖼️ Adding Your Images
